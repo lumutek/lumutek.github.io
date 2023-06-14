@@ -14,9 +14,13 @@ An Anaconda environment was created to run the notebook in. The CS_499 repositor
 application that span the development process(documentation added throughout development):
 
 1) Origin (The Catpole program and the Dashboard program, before any integration or upgrades)
+ 
 2) Enhancement 1: Software Design and Enginering (Requirements Analysis, Software Integration, Interface Design)
+ 
 3) Enhancement 2: Algorithms and Data Structures (optimization of speed and memory consumption)
+ 
 4) Enhancement 3: Databases (Expansion of database and data handling capabilities)
+ 
 5) MLDash (The most recent iteration of the final artifact, which includes security upgrades)
 
 
