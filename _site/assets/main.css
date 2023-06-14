@@ -367,6 +367,9 @@ table td {
 /**
  * Page content
  */
+.inner {
+  max-width: 75%;
+}
 .page-content {
   padding: 30px 0;
   flex: 1;
