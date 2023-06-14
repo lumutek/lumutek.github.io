@@ -14,11 +14,11 @@ Overviev: MLDash is currently a Jupyter Notebook application that reads to and w
 An Anaconda environment was created to run the notebook in. The CS_499 repository contains 5 snapshots of the MLDash
 application that span the development process(documentation added throughout development):
 
-    1.  [Origin][ml-origin]: (The Catpole program and the Dashboard program, before any integration or upgrades)
-    2.  [Enhancement 1][ml-enhancea]: Software Design and Enginering (Requirements Analysis, Software Integration, Interface Design)
-    3.  [Enhancement 2][ml-enhanceb]: Algorithms and Data Structure (optimization of speed and memory consumption)
-    4.  [Enhancement 3][ml-enhancec]: Databases (Expansion of database and data handling capabilities)
-    5.  [MLDash][ml-enhanced]: (The most recent iteration of the final artifact, which includes security upgrades)
+    [Origin][ml-origin]: (The Catpole program and the Dashboard program, before any integration or upgrades)
+    [Enhancement 1][ml-enhancea]: Software Design and Enginering (Requirements Analysis, Software Integration, Interface Design)
+    [Enhancement 2][ml-enhanceb]: Algorithms and Data Structure (optimization of speed and memory consumption)
+    [Enhancement 3][ml-enhancec]: Databases (Expansion of database and data handling capabilities)
+    [MLDash][ml-enhanced]: (The most recent iteration of the final artifact, which includes security upgrades)
 
 
 The MLDash project was written in the Spring of '23. As an aspiring machine learning engineer, 
@@ -75,8 +75,8 @@ By using tool that helps cultivate data perspective and insights, the process of
 learning algorithm becomes more intuitive for users, while reducing the cognitive burden associated with analyzing
 huge amounts of data. Enjoy!
 
-[MLDash on Github]:[ml-dash]
-[README on GitGub]:[read-me]
+[MLDash on Github]: [ml-dash]
+[README on GitGub]: [read-me]
 
 [read-me]: https://github.com/lumutek/lumutek.github.io/blob/main/README.md
 [ml-dash]: https://github.com/lumutek/CS-499/
