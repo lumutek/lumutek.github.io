@@ -21,119 +21,59 @@ application that span the development process(documentation added throughout dev
     5.  [MLDash][ml-enhanced]: (The most recent iteration of the final artifact, which includes security upgrades)
 
 
+The MLDash project was written in the Spring of '23. As an aspiring machine learning engineer, 
+and software engineer by discipline, I recognize the value in making complicated tasks more accessible to the common
+user. Training machine learning algorithms requires tuning their (sometimes numerous) hyperparameters and hoping
+that the changes made boost model performance, while also keeping track of the changes that have been made.
+The main purpose of this project is to simplify this task for users, automate record keeping, and generate data
+visualizations that can assist users in the selection of more optimal hyperparameters. While the project currently
+hosts only one AI algorithm, OpenAI Gym's Cartpole-v1, I anticipate that additional models can be added as modules
+over time. The cartpole algorithm is deep-Q reinforcement learning algorithm that solves the problem of balancing
+a pole attached to cart that moves on a frictionless rail. The model acquires data from the environment
+(observation space) and determines which sequence of actions results in better performance for each situation. 
+The model trains itself by replaying experiences it acquires, prioritizing samples of its experience based on how 
+different those experiences were from its predictions. The model begins training with a higher likelyhood to explore,
+allowing it to gather new experiences by trying numerous different action sequences; as training continues, the model
+relies less on exploration and more on the exploitation of the experiences it has gathered. 
 
+The MLDash program is centered around the Dashboard.ipynb file. This file creates an instance of the MLMongo class 
+(defined in crud.py) to initiate a connection to a local MongoDB service. It also creates an instance of the Cartpole 
+class, which makes use of the DQNsolver(for the learning model setup, and learning procedures), PrioritizedBuffer
+(an upgraded sampling procedure that makes experience replay a non-arbitrary process), and ScoreLogger(used to record 
+hyperparameter profiles along with key performance metrics) classes. During training, hyperparameter values and performance 
+metrics are written to the metrics.csv file. The metrics collection and summary collection are contained in the MongoDB 
+TRAIN database. When the model successfully balances the pole (for a minimum average duration) the metrics.csv file that 
+contains training data is read into a Python dictionary and written to the TRAIN/metrics database collection. Once the 
+database has been populated with training data, users can view this data using the dashboard. The dashboard allows the 
+data to be viewed in the form of an interactive data table and dynamic data visualizations. Users have the ability to 
+filter data to examine summary data and individual training sessions, and the accompanying charts change along with the 
+datatable.
 
-System requirements:
+This projec was created by integrating a simpler dashboard program and a basic cartpole learning model implementation.
+Various upgrades were made, along the way, in areas related to software engineering, algorithms and data structures,
+and data structures:
 
-16 GB of physical RAM, assuming that normal system function takes around 4GB or less
-Some virtual memory (Set to 8 GB, just in case)
-CPU with speed of at least 1Ghz 
-(There are no GPU requirements for this version, but CUDA enabled cores should be used automatcally if present on the host system)
+The names of files, functions, and variables were updated to reflect the new context
 
+Dependencies were updated to reflect more recent versioning
 
-Current Anaconda environment specifications:
+Significant amounts of documentation was added in the form of comments and a readme file.
 
-Python 3.7.16 (will upgrade if possible)
-gym=0.25.2
-tensorflow==2.11.0
-numpy==1.21.6
-pandas==1.3.5
-matplotlib==3.5.3
-pygame==2.4.0
-pyglet==2.0.7
-jupyter-dash==0.4.2
-dash==2.10.0
-pymongo==4.3.3
-dash_leaflet==0.1.23
-notebook==6.5.2
-ipykernal=6.16.2
-statsmodels
-dash-bootstrap-components
+Code was integrated and refactored into a more modular form that relies on seperate classes.
 
-The Anaconda environment can be created by entering the following commands:
+Additional functions were added to the crud.py, score_logger.py to facilitate local storage of learning model training
+data, and the ability to write this data to a database. The Dashboard.ipynb file was upgraded to provide a relevant 
+and task-specific interface with enhanced interactivity, dataframe filtering, data session indexing, and data 
+visualization capabilities.
 
-conda create --name MLDash python=3.7.16
+The learning algorithm itself enjoyed a significant upgrade that improved its ability to learn from its experiences.
+During exprience replay (code found in dqn_solver.py) the batch sampling method was upgraded from using a random
+sampling procedure to use prioritized sampling (code found in the prioritized_buffer.py file), resulting in a more
+effective implementation of the learning algorithm and contributing to significant reduction in total memory use. 
 
-conda activate MLDash
-
-py -m pip install --upgrade pip
-
-pip install gym=0.25.2 tensorflow==2.11.0 numpy==1.21.6 pandas==1.3.5 matplotlib==3.5.3 pygame==2.4.0 pyglet==2.0.7 jupyter-dash==0.4.2 dash==2.10.0 pymongo==4.3.3 dash_leaflet==0.1.23 notebook==6.5.2 ipykernal=6.16.2, statsmodels, dash-bootstrap-components
-
-
-Install MongoDB as a local server instance. 
-
-Either install MongoDB Compass (GUI) or the Mongo Shell (CLI) (mongosh was used by the developer, on Windows 10)
-post-mongosh installation setup:
-
-In the terminal, type the following commands;
-(this allows you to set up the necessary databases, users, roles, and security mechnisms):
-mongosh
-show dbs
-use admin
-
-db.createUser({
-  user: "admin",
-  pwd: "youradminpassword",
-  roles: [ { role: "dbAdminAnyDatabase", db: "admin" } ]
-})
-
-db.auth('admin','youradminpassword')
-
-db.updateUser(
-  'admin',
-  {
-    pwd: 'youradminpassword',
-    mechanisms: [ 'SCRAM-SHA-1', 'SCRAM-SHA-256' ] 
- }
-)
-
-use TRAIN
-db.createCollection("metrics")
-db.createCollection("summary")
-
-db.runCommand({ 
-  createUser: "yourusername",
-  pwd: "yourpassword",
-  roles: [{ role: "readWrite", db: "TRAIN" }]
-});
-db.updateUser(
-  'yourusername',
-  {
-    pwd: 'yourpassword',
-    mechanisms: [ 'SCRAM-SHA-1', 'SCRAM-SHA-256' ] 
- }
-)
-
-You can now exit Mongo Shell
-
-Once this setup has been completed, the correct connection string is as follows
-(This can be used to connect to the database using another program like MongoDB Compass):
-
-mongodb://yourusername:yourpassword@localhost:27017/TRAIN?authMechanism=SCRAM-SHA-256
-
-
-Jupyter Notebook Setup
-
-In order to apply the environment in Jupyter Notebook, type in the following command:
-
-python -m ipykernel install --user --name=MLDash
-
-
-Open Jupyter Notebook with the following command:
-
-jupyter notebook
-
-
-Open the Dashboard.ipynb in the project folder, wherever it was downloaded to on your machine
-
-
-Use the "Kernel" tab at the top of the notebook to select the MLDash kernel
-
-
-Run the notebook
-
-(The user is presented with a login screen, which must be successfully authenticated to before any other MLDash content can be displayed. Simply use the credentials you created for the regular user during database setup. Once authenticated, the dashboard application will run inline with the Jupyter Notebook content, with an optional link that allows a user to view the dashboard fullscreen in their default browser.)
+By using tool that helps cultivate data perspective and insights, the process of training a deep-Q reinforcement
+learning algorithm becomes more intuitive for users, while reducing the cognitive burden associated with analyzing
+huge amounts of data. Enjoy!
 
 [MLDash on Github]:[ml-dash]
 [README on GitGub]:[read-me]
