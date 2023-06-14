@@ -1,6 +1,7 @@
 
 title: Computer Science Portfolio
 email: lukas.mueller@snhu.edu
+logo: /images/bd_vis.jpg
 description: >- # this means to ignore newlines until "baseurl:"
   This site is dedicated to displaying noteworthy work done in the field of computer science.
 show_downloads: true
