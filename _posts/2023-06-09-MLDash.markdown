@@ -56,7 +56,7 @@ data to be viewed in the form of an interactive data table and dynamic data visu
 filter data to examine summary data and individual training sessions, and the accompanying charts change along with the 
 datatable.
 
-This projec was created by integrating a simpler dashboard program and a basic cartpole learning model implementation.
+This project was created by integrating a simpler dashboard program and a basic cartpole learning model implementation.
 Various upgrades were made, along the way, in areas related to software engineering, algorithms and data structures,
 and data structures:
 
