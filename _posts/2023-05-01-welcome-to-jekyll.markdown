@@ -4,7 +4,7 @@ title:  "Welcome to Jekyll!"
 title:  "SNHU Portfolio Time!"
 date:   2023-05-01 22:22:29 -0700
 categories: jekyll update
-background: "assets/images/_posts/bd_vis.jpg"
+background:  '_site/assets/images/bd_vis.jpg'
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
