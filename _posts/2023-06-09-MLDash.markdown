@@ -3,7 +3,7 @@ layout: post
 title:  Computer Science Capstone - MLDash
 date:   2023-06-09 22:22:29 -0700
 categories: portfolio update
-background: '/assets/images/_posts/bd_vis.jpg'
+background: '_site/assets/images/bd_vis.jpg'
 ---
 Lukas Mueller
 SNHU
