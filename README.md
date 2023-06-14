@@ -4,10 +4,14 @@ title: MLDash Requirements
 permalink: /readme/
 ---
 
-# Lukas Mueller
+Created by Lukas Mueller
+
 SNHU
+
 CS-499 Computer Science Capstone 
+
 Machine Learning Dashboard using OpenAI Gym, Tensorflow, MongoDB, and JupyterDash. 
+
 
 Overviev: MLDash is currently a Jupyter Notebook application that reads to and writes from an MongoDB database. 
 An Anaconda environment was created to run the notebook in. The CS_499 repository contains 5 snapshots of the MLDash
