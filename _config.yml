@@ -1,5 +1,11 @@
 title: Lukas Mueller
+title: Computer Science Portfolio
+description: >- # this means to ignore newlines until "baseurl:"
+  This site is dedicated to displaying noteworthy work done in the field of computer science.
 show_downloads: true
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://lumutek.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+github_username:  lumutek
 # Build settings
 theme: minima
 remote_theme: mmistakes/jekyll-theme-basically-basic 
