@@ -1,12 +1,7 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
----
 layout: home
 title: Computer Science Capstone - MLDash
 permalink: /index/
-# date:   2023-06-09 22:22:29 -0700
-# categories: portfolio update
 background: '/images/bd_vis.jpg'
 ---
 <bd>Lukas Mueller</bd>
