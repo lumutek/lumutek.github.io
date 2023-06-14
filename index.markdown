@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Computer Science Capstone - MLDash
+title: Portfolio
 permalink: /index/
 background: '/images/bd_vis.jpg'
 ---
@@ -8,7 +8,7 @@ background: '/images/bd_vis.jpg'
 
 <bd>SNHU</bd>
 
-<bd>CS-499 Computer Science Capstone</bd>
+<bd>CS-499 Computer Science Capstone - MLDash</bd>
 
 <bd>Machine Learning Dashboard using OpenAI Gym, Tensorflow, MongoDB, and JupyterDash.</bd>
 
