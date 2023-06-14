@@ -84,9 +84,9 @@ huge amounts of data. Enjoy!
 
 [read-me]: https://github.com/lumutek/lumutek.github.io/blob/main/README.md
 [ml-dash]: https://github.com/lumutek/CS-499/
-[ml-origin]: https://lumutek.github.io/tree/main/MLDash/1-Origin
-[ml-enhancea]: https://lumutek.github.io/tree/main/MLDash/2-Enhancement_1_Software_Design_and_Engineering
-[ml-enhanceb]: https://lumutek.github.io/tree/main/MLDash/3-Enhancement_2_Algorithms_and_Data_Structure
-[ml-enhancec]: https://lumutek.github.io/tree/main/MLDash/4-Enhancement_3_Databases
-[ml-enhanced]: https://lumutek.github.io/tree/main/MLDash/5-MLDash
+[ml-origin]: https://github.com/lumutek/lumutek.github.io/tree/main/MLDash/1-Origin
+[ml-enhancea]: https://github.com/lumutek/lumutek.github.io/tree/main/MLDash/2-Enhancement_1_Software_Design_and_Engineering
+[ml-enhanceb]: https://github.com/lumutek/lumutek.github.io/tree/main/MLDash/3-Enhancement_2_Algorithms_and_Data_Structure
+[ml-enhancec]: https://github.com/lumutek/lumutek.github.io/tree/main/MLDash/4-Enhancement_3_Databases
+[ml-enhanced]: https://github.com/lumutek/lumutek.github.io/tree/main/MLDash/5-MLDash
 
