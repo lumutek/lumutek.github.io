@@ -12,7 +12,7 @@ Machine Learning Dashboard using Keras, MongoDB, and JupyterDash.
 
 Overviev: MLDash is currently a Jupyter Notebook application that reads to and writes from an MongoDB database. 
 An Anaconda environment was created to run the notebook in. The CS_499 repository contains 5 snapshots of the MLDash
-application that span the development process(documentation added throughout development):
+application that span the development process(documentation added throughout development).
 
 [Origin][ml-origin] - The Cartpole program and the Dashboard program, before any integration or upgrades
 
