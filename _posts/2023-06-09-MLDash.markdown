@@ -5,13 +5,13 @@ date:   2023-06-09 22:22:29 -0700
 categories: portfolio update
 background: '_site/assets/images/bd_vis.jpg'
 ---
-#Lukas Mueller
+<bd>Lukas Mueller</bd>
 
-#SNHU
+<bd>SNHU</bd>
 
-#CS-499 Computer Science Capstone
+<bd>CS-499 Computer Science Capstone</bd>
 
-#Machine Learning Dashboard using OpenAI Gym, Tensorflow, MongoDB, and JupyterDash. 
+<bd>Machine Learning Dashboard using OpenAI Gym, Tensorflow, MongoDB, and JupyterDash.</bd>
 
 Overviev: MLDash is currently a Jupyter Notebook application that reads to and writes from an MongoDB database. 
 An Anaconda environment was created to run the notebook in. The CS_499 repository contains 5 snapshots of the MLDash
