@@ -1,6 +1,6 @@
 ---
 layout: page
-title: README
+title: MLDash Requirements
 permalink: /readme/
 ---
 
