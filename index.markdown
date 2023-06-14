@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Portfolio
-permalink: /index/
+permalink: /portfolio/
 background: '/images/bd_vis.jpg'
 ---
 <bd>Lukas Mueller</bd>
