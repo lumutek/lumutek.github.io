@@ -28,12 +28,12 @@ layout: page
         <ul>
           <li>
             <h3>MLDash</h3>
-            <img src="/images/mldash.png" alt="Project 1 thumbnail">
+            <img src="images/mldash.png" alt="Project 1 thumbnail">
             <p>I developed the MLDash application for my Computer Science Capstone project. MLDash is a Jupyter Dash app that allows a user to tune machine learning hyperparameters for a reinforcement learning algorithm. Hyperparameters and performance metrics are stored in a MongoDB database, then displayed in the dashboard as a data table and data visualization graphics.</p>
           </li>
           <li>
             <h3>More coming soon...</h3>
-            <img src="/images/bd_vis.jpg" alt="Project 2 thumbnail">
+            <img src="images/bd_vis.jpg" alt="Project 2 thumbnail">
             <p>While several projects will soon have a new home on this page, MLDash is the main attraction</p>
           </li>
         </ul>
