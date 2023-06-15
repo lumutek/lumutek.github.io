@@ -3,6 +3,7 @@ layout: home
 title: Portfolio
 permalink: /portfolio/
 background: '/images/bd_vis.jpg'
+youtubeId: fjA3YFZK3E8
 ---
 <bd>Lukas Mueller</bd>
 
@@ -26,7 +27,8 @@ application that span the development process(documentation added throughout dev
 
 [MLDash][ml-enhanced] - The most recent iteration of the final artifact, which includes security upgrades
 
-The initial [code review][code-review] can be viewed on YouTube.
+The initial [code review][code-review] can be viewed here or on YouTube.
+{% include youtubePlayer.html id=page.youtubeId %}
 
 The MLDash project was written in the Spring of '23. As an aspiring machine learning engineer, 
 and software engineer by discipline, I recognize the value in making complicated tasks more accessible to the common
