@@ -28,7 +28,7 @@ application that span the development process(documentation added throughout dev
 
 [MLDash][ml-enhanced] - The most recent iteration of the final artifact, which includes security upgrades
 
-The initial [code review][code-review] can be viewed here or on YouTube.
+The initial code review can be viewed here or on [YouTube][code-review].
 {% include youtubePlayer.html id=page.youtubeId %}
 
 
