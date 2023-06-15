@@ -24,8 +24,9 @@ application that span the development process(documentation added throughout dev
 
 [Enhancement 3][ml-enhancec] - Databases (Expansion of database and data handling capabilities)
 
-[MLDash][ml-enhanced] - The most recent iteration of the final artifact, which includes security upgrades)
+[MLDash][ml-enhanced] - The most recent iteration of the final artifact, which includes security upgrades
 
+The initial code review can be viewed on YouTube at https://youtu.be/fjA3YFZK3E8
 
 The MLDash project was written in the Spring of '23. As an aspiring machine learning engineer, 
 and software engineer by discipline, I recognize the value in making complicated tasks more accessible to the common
