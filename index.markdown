@@ -109,7 +109,7 @@ During exprience replay (code found in dqn_solver.py) the batch sampling method 
 sampling procedure to use prioritized sampling (code found in the prioritized_buffer.py file), resulting in a more
 effective implementation of the learning algorithm and contributing to significant reduction in total memory use. 
 
-By using tool that helps cultivate data perspective and insights, the process of training a deep-Q reinforcement
+By using a tool that helps cultivate data perspective and insights, the process of training a deep-Q reinforcement
 learning algorithm becomes more intuitive for users, while reducing the cognitive burden associated with analyzing
 huge amounts of data. Enjoy!
 
