@@ -1,0 +1,55 @@
+---
+permalink: /index.html
+layout: page
+---
+<html>
+  <head>
+    <title>Lukas Mueller</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Portfolio Home</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#projects">PROJECTS</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="about">
+        <h2>ABOUT ME</h2>
+        <p>I am a computer scientist with a concentration in Software Engineering and a background in IT. I am currently working toward becoming a Machine Learning Engineer.  </p>
+      </section>
+      <section id="projects">
+        <h2>MY PROJECTS</h2>
+        <ul>
+          <li>
+            <h3>MLDash</h3>
+            <img src="project1.png" alt="Project 1 thumbnail">
+            <p>I developed the MLDash application for my Computer Science Capstone project. MLDash is a Jupyter Dash app that allows a user to tune machine learning hyperparameters for a reinforcement learning algorithm. Hyperparameters and performance metrics are stored in a MongoDB database, then displayed in the dashboard as a data table and data visualization graphics.</p>
+          </li>
+          <li>
+            <h3>More coming soon...</h3>
+            <img src="project2.png" alt="Project 2 thumbnail">
+            <p>While several projects will soon have a new home on this page, MLDash is the main attraction</p>
+          </li>
+        </ul>
+      </section>
+      <section id="contact">
+        <h2>CONTACT ME</h2>
+        <form>
+          <label for="name">Name:</label><br/>
+          <input type="text" id="name" name="name"><br/>
+          <label for="email">Email:</label><br/>
+          <input type="email" id="email" name="email"><br/>
+          <label for="message">Message:</label><br/>
+          <textarea id="message" name="message"></textarea><br/>
+          <input type="submit" value="Send">
+        </form>
+      </section>
+    </main>
+    <footer>
+
