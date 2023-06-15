@@ -26,7 +26,7 @@ application that span the development process(documentation added throughout dev
 
 [MLDash][ml-enhanced] - The most recent iteration of the final artifact, which includes security upgrades
 
-The initial code review can be viewed on YouTube at https://youtu.be/fjA3YFZK3E8
+The initial [code review][code-review] can be viewed on YouTube.
 
 The MLDash project was written in the Spring of '23. As an aspiring machine learning engineer, 
 and software engineer by discipline, I recognize the value in making complicated tasks more accessible to the common
@@ -87,9 +87,12 @@ huge amounts of data. Enjoy!
 
 [read-me]: https://github.com/lumutek/lumutek.github.io/blob/main/README.md
 [ml-dash]: https://github.com/lumutek/CS-499/
+
 [ml-origin]: https://github.com/lumutek/lumutek.github.io/tree/main/MLDash/1-Origin
 [ml-enhancea]: https://github.com/lumutek/lumutek.github.io/tree/main/MLDash/2-Enhancement_1_Software_Design_and_Engineering
 [ml-enhanceb]: https://github.com/lumutek/lumutek.github.io/tree/main/MLDash/3-Enhancement_2_Algorithms_and_Data_Structure
 [ml-enhancec]: https://github.com/lumutek/lumutek.github.io/tree/main/MLDash/4-Enhancement_3_Databases
 [ml-enhanced]: https://github.com/lumutek/lumutek.github.io/tree/main/MLDash/5-MLDash
+
+[code-review]: https://youtu.be/fjA3YFZK3E8
 
