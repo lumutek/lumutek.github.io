@@ -13,7 +13,7 @@ show_downloads: true
 theme: minima
 #remote_theme: jekyll-theme-chirpy
 #remote_theme: mmistakes/jekyll-theme-basically-basic 
-remote_theme: jekyl-theme-hacker
+remote_theme: pages-themes/jekyl-theme-hacker
 #remote_theme: jekyl-theme-time-machine
 #remote_theme: jekyl-theme-midnight
 #remote_theme: pages-themes/hacker
