@@ -5,7 +5,7 @@ title:  "MLDash"
 date:   2023-06-16 05:00:00 -0700
 categories: capstone narratives
 ---
-### Capstone Objectives & Enhancements
+### Capstone Objectives & Outcomes
 
 #### Course Outcome 1: 
 You Employed strategies for building collaborative environments that enable diverse audiences to support organizational decision-making in the field of computer science by completing the following enhancements:

@@ -5,7 +5,7 @@ title:  "SNHU Computer Science Capstone"
 date:   2023-06-10 05:00:00 -0700
 categories: capstone narratives
 ---
-I plan to integrate and enhance the functionality of two artifacts to showcase my software engineering skills. Each of the two artifacts has at least two of the following categories which apply to these enhancements. The selected artifacts were completed during CS-340 (a standalone dashboard application with a MongoDB backend) and CS-370 (a program that uses a deep Q reinforcement learning algorithm to solve the cartpole problem). This project will demonstrate skills gained throughout my Computer Science degree studies, including those related to Software Design and Engineering, Algorithms and Data Structures, and Databases.
+##### I plan to integrate and enhance the functionality of two artifacts to showcase my software engineering skills. Each of the two artifacts has at least two of the following categories which apply to these enhancements. The selected artifacts were completed during CS-340 (a standalone dashboard application with a MongoDB backend) and CS-370 (a program that uses a deep Q reinforcement learning algorithm to solve the cartpole problem). This project will demonstrate skills gained throughout my Computer Science degree studies, including those related to Software Design and Engineering, Algorithms and Data Structures, and Databases.
 
 ### Software Design and Engineering:
 a. Both the Dashboard from CS-340 and the Cartpole program from CS-370, will be enhanced within the scope of software design and engineering. 
@@ -21,5 +21,11 @@ c. Enhancements in this category will demonstrate my knowledge of how to impleme
 a. The Dashboard program from CS-340 can be improved within the scope of databases.
 b. The program can be improved by repurposing it to query dynamically populated databases (generated with data produced by the Cartpole program), and through the modification of the interface functionality to produce labor-saving feedback to the Cartpole model training process. The program is already integrated with a Python compatible version of a non-relational database (MongoDB), with prespecified database queries made available to common users through easy-to-use graphical user interface elements. Some of these elements will be repurposed to access data stored by the Cartpole program, and additional controls will be created to augment the Dashboard functionality for use in the new context. I am also considering implementing fast encryption and decryption for data contained in the database to demonstrate how sensitive data can be worked with while still being protected.
 c. By implementing strategies that improve the security of data at rest and data at flight, I will demonstrate a security mindset that anticipates adversarial exploits in software architecture and designs to expose potential vulnerabilities, mitigate design flaws, and ensure privacy and enhanced security of data and resources.
-Additional Course Objectives:
+
+### Additional Course Objectives:
 Through the use of GitHub (public-facing repositories) and GitHub Pages (a site with which to highlight select portfolio items), I will position myself for collaborative development of future iterations of the target artifact. Additionally, I will have the opportunity to integrate feedback from my peers, Professor Goggin, and past professors. This will facilitate well-documented updates and proper versioning of my portfolio project while demonstrating my ability to employ strategies for building collaborative environments that enable diverse audiences to support organizational decision-making in the field of computer science. The production of my final project will require that I communicate my progress through narratives and a professional self-assessment; this will demonstrate my ability to design, develop, and deliver professional-quality oral, written, and visual communications that are coherent, technically sound, and appropriately adapted to specific audiences and contexts.
+
+This site was built using [GitHub Pages](https://pages.github.com/)
+You can find the source code for [Jekyll][jekyll-organization] at GitHub
+
+[jekyll-organization]: https://github.com/jekyll
