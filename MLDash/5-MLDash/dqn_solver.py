@@ -2,7 +2,7 @@ from collections import deque
 import numpy as np
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
-from tensorflow.keras.optimizers import Adam
+from tensorflow.keras.optimizers import RMSprop
 import random
 from prioritized_buffer import PrioritizedBuffer 
 
@@ -40,7 +40,7 @@ class DQNSolver:
         self.model.add(Dense(self.actionSpace, activation="linear"))    
         ## mean squared error loss function, using the RMSprop optimizer. The Adam optimizer is recommended for greater accuracy, 
         # but RMSprop can require as little as one third of the memory due to the way it stores moving averages. 
-        self.model.compile(loss="mse", optimizer=Adam(learning_rate=self.learningRate))     
+        self.model.compile(loss="mse", optimizer=RMSprop(learning_rate=self.learningRate))     
             
     
     def remember(self, state, action, reward, state_next, terminal):

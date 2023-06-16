@@ -9,7 +9,8 @@ MAX_RUNS = 3000
 MAX_STEPS = 2000
   
 class MLCartpole:        
-    def __init__(self, session, a, g, emin, emax, edec, eps, bat, buf, cart):
+    def __init__(self, session, anim_on, a, g, emin, emax, edec, eps, bat, buf):
+        print("Animation Enabled: " + str(anim_on))
         self.solved = False
         self.session = session
         self.env = "CartPole-v1"
@@ -34,13 +35,13 @@ class MLCartpole:
         #BUFFER_SIZE specifies size of customized queue holding model experience (model intermittently reviews
         #  a prioritized buffer sample of experience data of size BATCH_SIZE, instead of reviewing all experience, to reduce memory  #consumption)
         self.buffer_size = buf
-        self.cart_animation = cart
+        self.cart_animation = anim_on
         self.max_runs = MAX_RUNS
         self.max_steps = MAX_STEPS
     
     #cartpole(envName, learnRate, gamma, explMin, explMax, explDecay, numEpisodes, batchSize, memSize)
-    def cartpole(self):  
-        if self.cart_animation == True:
+    def cartpole(self, animation):  
+        if animation == True:
             env = gym.make(self.env, render_mode='human')
         else:
             env = gym.make(self.env)
@@ -53,14 +54,14 @@ class MLCartpole:
             self.steps = 0
             self.runs += 1 
             state = env.reset() 
-            #This has been modified to work with the newest version of openai gym (gym v25.2)
+            #This has been modified to work with a newer version of OpenAI Gym (gym v25.2)
             state = np.reshape(state, (1, observation_space)) 
             
             while self.steps < self.max_steps:  
                 # Each successful step increases the score/reward; Limiting the maximum number of steps prevents a very successful model from running interminably (This prevents unnecessary memory use).
                 self.steps += 1 
                 #This allows the training to be displayed as an animation 
-                if self.cart_animation == True:
+                if animation == True:
                     env.render()  
                 # This generates a series of actions based on the sequence of current state
                 action = dqn_solver.act(state)  

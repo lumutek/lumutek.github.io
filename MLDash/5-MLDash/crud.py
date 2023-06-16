@@ -107,33 +107,23 @@ class MLMongo(object):
         else:
             raise Exception("Nothing to read, because the lookup data parameter is empty")
             
+
             
-            
-   #Additional method added to expand CRUD functionality to insert a single document or many documents
-    #insert records to the database
-    #def write_to_metrics(self): #exception handling has been moved to the location of the function call
-    #        with open(self.metrics_file, 'r', newline='') as csvfile:
-    #            csvreader = csv.DictReader(csvfile, fieldnames=self.fields_metrics)
-    #            for row in csvreader:
-    #                self.metrics.insert_one(row)
-    #        return    
-    
-    
-    #def write_to_summary(self): #exception handling has been moved to the location of the function call
-    #        with open(self.summary_file, 'r', newline='') as csvfile:
-    #            csvreader = csv.DictReader(csvfile, fieldnames=self.fields_summary)
-    #            for row in csvreader:
-    #                self.summary.insert_one(row)
-                    
     def import_csv(self, csv_file, csv_fields): #exception handling has been moved to the location of the function call
             with open(csv_file, 'r', newline='') as csvfile:
                 csvreader = csv.DictReader(csvfile, fieldnames=csv_fields)
                 for row in csvreader:
-                    self.metrics.insert_one(row)
+                    if csv_file == 'metrics.csv':
+                        self.database.metrics.insert_one(row)
+                    elif csv_file == 'summary.csv':
+                        self.database.summary.insert_one(row)
+                    else:
+                        print("The file being written to the database is not recognized. Aborting write operation.")
+                        
             return 
             
      
-    #This method allows a user to clear the mongodb backend database 
+    #This method allows a user to clear the mongoDB backend databases
     def clear_collections(self):
         result = self.database.metrics.delete_many({})
         print(f"{result.deleted_count} documents deleted from {self.metrics} metrics in {self.database} database.")
@@ -147,8 +137,8 @@ class MLMongo(object):
             # test authentication by pinging the database server
             self.database.command('ping')
             return True
-        except OperationFailure:
-            print("authentication operation failed")
+        except Exception as e: 
+            print("Authentication operation failed: ")
             return False
         
     

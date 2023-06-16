@@ -14,9 +14,8 @@ SUMMARY_CSV_PATH = "summary.csv"
 # This is the average score that the model needs to achieve to be considered as successful in solving the cartpole problem (difficulty)
 #Win criteria set lower than is tyically seen, for testing and lower memory requirements (try 200 instead, if you've got the hardware) 
 AVERAGE_SCORE_TO_SOLVE = 100 # 200
-#This is the buffer size for storing consecutive runs, and is central to calculating average score, minimum score, and maximum score
-#It also ensures that the model can't solve the problem by being wildly lucky during its first runs
-CONSECUTIVE_RUNS_TO_SOLVE = 40 #100
+#This is the buffer size for storing consecutive runs, and is central to calculating am moving average of scores, the local minimum score, and the local maximum score.It also ensures that the model can't solve the problem by having a lucky streak
+CONSECUTIVE_RUNS_TO_SOLVE = 100 #100
   
   
 class ScoreLogger:  
@@ -43,24 +42,22 @@ class ScoreLogger:
         #An inverted explore rate makes more intuitive sense, especially on data visualization charts
         self.exploreRate_percent = 100*exploreRate
         self.scores.append(steps)  
-        meanScore = mean(self.scores)
+        self.meanScore = mean(self.scores)
         minScore = min(self.scores)
         maxScore = max(self.scores)
         if (self.maxScoreGlobal < maxScore):
             self.maxScoreGlobal = maxScore
-        if (self.maxMean < meanScore):
-            self.maxMean = meanScore
+        if (self.maxMean < self.meanScore):
+            self.maxMean = self.meanScore
        
         print ("Run: " + str(run) + ", exploration percent: " + str(self.exploreRate_percent) + ", score: " + str(steps)) 
-        print ("Scores:  (LocalAvg: " + str(meanScore) + ", MaxAvg: " + str(self.maxMean) + ", LocalMaxScore: " + 
-               str(maxScore) + ", GlobalMaxScore: " + str(self.maxScoreGlobal) + ")\n") 
+        print ("Scores: (Minimum Score: " + str(minScore) + " MovingAvg: " + str(self.meanScore) + ", MaxAvg: " + str(self.maxMean) + ", LocalMaxScore: " + str(maxScore) + ", GlobalMaxScore: " + str(self.maxScoreGlobal) + ")\n") 
         
-        self.toMetricsCsv = {'session' : session, 'run': run, 'meanScores': meanScore, 'maxScores': maxScore, 'globalMax': self.maxScoreGlobal, 'alpha': alpha, 'gamma': gamma, 'exploreRate': self.exploreRate_percent, 'batchSize': batchSize, 'bufferSize': memSize}
+        self.toMetricsCsv = {'session' : session, 'run': run, 'meanScores': self.meanScore, 'maxScores': maxScore, 'globalMax': self.maxScoreGlobal, 'alpha': alpha, 'gamma': gamma, 'exploreRate': self.exploreRate_percent, 'batchSize': batchSize, 'bufferSize': memSize}
         
         self._save_csv(self.metrics_file, self.toMetricsCsv, self.metrics_header)
         
-        if meanScore >= AVERAGE_SCORE_TO_SOLVE and len(self.scores) >= CONSECUTIVE_RUNS_TO_SOLVE:
-            print("Cartpole solved in " + str(len(self.scores)) + " runs, with an average score of " + str(meanScore) + " and a maximum score of " + str(self.maxScoreGlobal))
+        if self.meanScore >= AVERAGE_SCORE_TO_SOLVE and len(self.scores) >= CONSECUTIVE_RUNS_TO_SOLVE:
             return True  
         
         else:
@@ -68,6 +65,7 @@ class ScoreLogger:
     
     #While the current implementation does not read the summary data to the dataframe, the program still collects it in the summary.csv file and summary database collection.                       
     def add_summary(self, session, totRuns, totSteps, alpha, gamma, epsMin, epsMax, epsDecay, numEps, batchSize, memSize):   
+        print("Cartpole solved in " + str(totRuns) + " runs, with an average score of " + str(self.meanScore) + " and a maximum score of " + str(self.maxScoreGlobal)+ "\n")
         print ("Session Summary:" + "\n Total Runs: " + str(totRuns) + "\n Total steps: " + str(totSteps) + "\n Maximum Score: " + str(self.maxScoreGlobal) + "\n Learning Rate: " + str(alpha) + "\n Discount Factor: " + str(gamma) + "\n Exploration Minimum: " + str(epsMin) + "\n Exploration Maximum: " + str(epsMax) + "\n Exploration Decay: " + str(epsDecay) +"\n # of Episodes: " + str(numEps) + "\n Batch Size: " + str(batchSize) + "\n Buffer Size: " + str(memSize) ) 
 
         self.toSummaryCsv = {'session' : session, 'totalRuns': totRuns, 'totalSteps': totSteps, 'globalMax': self.maxScoreGlobal, 'alpha': alpha, 'gamma': gamma, 'epsilonMin': epsMin, 'epsilonMax': epsMax, 'epsilonDecay': epsDecay, 'episodes': numEps, 'batchSize': batchSize, 'bufferSize': memSize}
