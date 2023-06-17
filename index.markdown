@@ -21,17 +21,17 @@ youtubeId: fjA3YFZK3E8
 
 ### Artifacts (The Dashboard and Cartpole artifacts are combined in the MLDash artifact in Enhancement 1)
 
-##### The CS_499 Github repository contains 5 snapshots of the MLDash application that span the development process (documentation added throughout development). Here are links to all of the code:
+#### The CS_499 Github repository contains 5 snapshots of the MLDash application that span the development process (documentation added throughout development). Here are links to all of the code:
 
-##### [Origin][ml-origin] - The Cartpole program and the Dashboard program, before any integration or upgrades
+* ##### [Origin][ml-origin] - The Cartpole program and the Dashboard program, before any integration or upgrades
 
-##### [Enhancement 1][ml-enhancea] - Software Design and Enginering (Requirements Analysis, Software Integration, Interface Design)
+* ##### [Enhancement 1][ml-enhancea] - Software Design and Enginering (Requirements Analysis, Software Integration, Interface Design)
 
-##### [Enhancement 2][ml-enhanceb] - Algorithms and Data Structure (optimization of speed and memory consumption)
+* ##### [Enhancement 2][ml-enhanceb] - Algorithms and Data Structure (optimization of speed and memory consumption)
 
-##### [Enhancement 3][ml-enhancec] - Databases (Expansion of database and data handling capabilities)
+* ##### [Enhancement 3][ml-enhancec] - Databases (Expansion of database and data handling capabilities)
 
-##### [MLDash][ml-enhanced] - The most recent iteration of the final artifact, which includes security upgrades
+* ##### [MLDash][ml-enhanced] - The most recent iteration of the final artifact, which includes security upgrades
 
 
 ### Highlights
@@ -53,14 +53,14 @@ youtubeId: fjA3YFZK3E8
 
 #### Check out my blog posts (narratives), below, to learn more about my coding journey... or jump to a particular narrative using these links:
 
-[Initial enhancement plan][enhancement-plan]
-[Enhancement #1 Narrative: Software Development and Engineering][enhance-one]
-[Enhancement #2 Narrative: Algorithms and Data Structures][enhance-two]
-[Enhancement #3 Narrative: Databases][enhance-three]
-[Further Enhancements: Security, Interface, and Polishing][enhance-more]
-[Course Objectives and Outcomes][course-outcomes]
+* [Initial enhancement plan][enhancement-plan]
+* [Enhancement #1 Narrative: Software Development and Engineering][enhance-one]
+* [Enhancement #2 Narrative: Algorithms and Data Structures][enhance-two]
+* [Enhancement #3 Narrative: Databases][enhance-three]
+* [Further Enhancements: Security, Interface, and Polishing][enhance-more]
+* [Course Objectives and Outcomes][course-outcomes]
 
- #### Enjoy!
+### Enjoy!
 
 
 This site was built using [GitHub Pages](https://pages.github.com/)
