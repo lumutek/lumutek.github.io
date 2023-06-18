@@ -238,9 +238,12 @@ class MLMongo(object):
             # test authentication by pinging the database server
             self.database.command('ping')
             return True
+        except OperationFailure as err:
+            print (f"Authentication operation failed due to: {err}. \nPlease enter valid credentials.")
+            exit()
         except Exception as e: 
-            print("Authentication operation failed: ")
-            return False
+            print("Exception was thrown: {e}. \nPlease contact the developer.")
+            exit()
 ```
 
 #####   In the category of security, the database authentication string was upgraded to require the use of the SCRAM-SHA-256 authentication mechanism, and the code was modified so that the authentication credentials used in the connection string were note storered in the code itself. The interface was modified to prompt users for a valid username and password, which are specified by a MongoDB admin user; the main content of the program is not displayed until a user successfully authenticates. A security class was created, the instances of which utilized a cryptographically secure single-use byte sequence, derived from the secrets library. The secure byte-sequence is truncated to the length of both the username and password input byte-translations, and the credentials are XORed against the relevant variable length sequence, then converted to hexidecimal. The encoded credentials and security object are then used to create a CRUD-capable MongoDB agent object, which decodes the credentials and inserts them into the database connection string. The code then attempts to ping the database server, only giving access to the dashboard content when the ping operation is successful. The Security class is shown in full detail here:
