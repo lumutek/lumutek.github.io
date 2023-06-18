@@ -26,16 +26,16 @@ youtubeId: fjA3YFZK3E8
 #####   In the category of software development and engineering, I successfully integrated two distinct programs, added additional functionality, upgraded existing functionality, and designed the MLDash application based on the requirements of target users (novices to artificial intelligence that want entry-level exposure to the technology). The development of additional classes and the refactoring of code contributed to enhanced organization and interoperability between code files, and led the code that is significantly more object oriented. The application interface was redesigned to accomodate the repurposed functionality and the needs of target users. Iterative testing with continuous feedback integration was performed througout development.
 
 ##### Login Page:
-![MLDash Dashboard Interface](/images/login.jpg "MLDash Dashboard Interface for Reinforcement Learning")
+![MLDash Dashboard Login](/images/login.jpg "MLDash Dashboard Interface for Reinforcement Learning")
 
 ##### MLDash Interface:
 ![MLDash Dashboard Interface](/images/mldash.jpg "MLDash Dashboard Interface for Reinforcement Learning")
 
-##### Data Visualization Charts (Session Comparison):
-![MLDash Dashboard Interface](/images/charts_global.jpg "MLDash Dashboard Interface for Reinforcement Learning")
+##### Data Visualization Charts (Session Comparison, No Filtering):
+![MLDash Dashboard All-Data Charts](/images/charts_global.jpg "MLDash Dashboard Interface for Reinforcement Learning")
 
-##### Data visualization Charts (View Metrics for a SIngle Session, or for all sessions):
-![MLDash Dashboard Interface](/images/charts_local.jpg "MLDash Dashboard Interface for Reinforcement Learning")
+##### Data visualization Charts (Charts That respond to Metrics Filtering):
+![MLDash Dashboard Filtered ](/images/charts_local.jpg "MLDash Dashboard Interface for Reinforcement Learning")
 
 #####   In the category of algorithms and data structures, I overhauled the reinforcement learning algorithm's core method of learning from its own experiences. The MLDash artifact does not perform random sampling of its experiences to learn, but instead performs prioritized sampling which identifies experiences that did not conform to the model's predictions, and emphasizes these experiences, to form a better predictive model (another effect of this implementation was a significant reduction in the amount of memory needed to solve the reinforcement learning problem, reducing the required amount of combined physical RAM and virtual memory from 80-100GB to 16-32GB, a 2.5 to 6.25 reduction factor). Additional improvements in memory efficiency were gained through the use of an alternative neural network optimizer. While the RMSprop optimizer is slightly less accurate than the Adam optimizer, it only uses about a third of the memory due to different methods of computing moving averages (The slight loss in accuracy was more than compensated for by the upgraded sampling method, and limiting memory consumption is of paramount importance if the program is to be useful for the target audience, who may not have extraordinary computer hardware at their disposal). The code for the PrioritizedBuffer class can be seen here:
 
