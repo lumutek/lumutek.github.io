@@ -1,5 +1,6 @@
 import pandas as pd
 from pymongo import MongoClient
+from pymongo.errors import OperationFailure
 import csv
 
 class MLMongo(object):
@@ -133,9 +134,13 @@ class MLMongo(object):
             # test authentication by pinging the database server
             self.database.command('ping')
             return True
+        except OperationFailure as err:
+            print (f"Authentication operation failed due to: {err}. \nPlease enter valid credentials.")
+            exit()
         except Exception as e: 
-            print("Authentication operation failed: ")
-            return False
+            print("Exception was thrown: {e}. \nPlease contact the developer.")
+            exit()
+            
         
     
     
