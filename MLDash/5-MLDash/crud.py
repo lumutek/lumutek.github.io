@@ -1,14 +1,12 @@
 import pandas as pd
 from pymongo import MongoClient
-from bson.objectid import ObjectId
-from score_logger import ScoreLogger
 import csv
 
 class MLMongo(object):
     """ CRUD operations for MLDash metrics in MongoDB """
 
     def __init__(self, security_object, encoded_username, encoded_password):
-# Initializing the MongoClient. This helps to access the MongoDB databases and metrics.
+    # Initializing the MongoClient. This helps to access the MongoDB databases and metrics.
         
         self.securityObject = security_object
         self.username, self.password = self.securityObject.xor_decode(encoded_username, encoded_password)
@@ -19,11 +17,9 @@ class MLMongo(object):
        
         self.metrics = self.database['metrics'] #collection
         self.summary = self.database['summary'] #collection
-       #self.login - self.database['login'] #collection
         self.metrics_file = 'metrics.csv'
         self.summary_file = 'summary.csv'
-        #self.fields_metrics = ['session', 'run', 'meanScore', 'maxScore', 'alpha', 'gamma', 'exploreRate', 'batchSize', 'bufferSize']
-        #self.fields_summary = ['session', 'totalSteps', 'totalRuns', 'maxScore', 'alpha', 'gamma', 'epsilonMin', 'epsilonMax', 'epsilonDecay', 'episodes', 'batchSize', 'bufferSize']
+       
 
     # Create method to implement the C in CRUD.
     def create(self, data):
@@ -108,8 +104,8 @@ class MLMongo(object):
             raise Exception("Nothing to read, because the lookup data parameter is empty")
             
 
-            
-    def import_csv(self, csv_file, csv_fields): #exception handling has been moved to the location of the function call
+    # This function reads CSV data into a Python dictionary, and inserts each row into the appropriate collection as a record        
+    def import_csv(self, csv_file, csv_fields): 
             with open(csv_file, 'r', newline='') as csvfile:
                 csvreader = csv.DictReader(csvfile, fieldnames=csv_fields)
                 for row in csvreader:

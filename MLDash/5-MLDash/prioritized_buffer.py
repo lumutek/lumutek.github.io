@@ -1,5 +1,4 @@
 from collections import namedtuple, deque
-import random
 import numpy as np
 
 Experience = namedtuple('Experience', 'state action reward next_state terminal priority')
