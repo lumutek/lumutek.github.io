@@ -13,9 +13,9 @@ METRICS_CSV_PATH = "metrics.csv"
 SUMMARY_CSV_PATH = "summary.csv"
 # This is the average score that the model needs to achieve to be considered as successful in solving the cartpole problem (difficulty)
 #Win criteria set lower than is tyically seen, for testing and lower memory requirements (try 200 instead, if you've got the hardware) 
-AVERAGE_SCORE_TO_SOLVE = 20 # 200
+AVERAGE_SCORE_TO_SOLVE = 100 # represents difficulty (easy: 50, normal: 100, hard: 200)
 #This is the buffer size for storing consecutive runs, and is central to calculating am moving average of scores, the local minimum score, and the local maximum score.It also ensures that the model can't solve the problem by having a lucky streak
-CONSECUTIVE_RUNS_TO_SOLVE = 40 #100
+CONSECUTIVE_RUNS_TO_SOLVE = 100 #100
   
   
 class ScoreLogger:  
