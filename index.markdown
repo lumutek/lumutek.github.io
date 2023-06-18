@@ -32,10 +32,13 @@ youtubeId: fjA3YFZK3E8
 ![MLDash Dashboard Interface](/images/mldash.jpg "MLDash Dashboard Interface for Reinforcement Learning")
 
 ##### Data Visualization Charts (Session Comparison, No Filtering):
-![MLDash Dashboard All-Data Charts](/images/charts_global.jpg "MLDash Dashboard Interface for Reinforcement Learning")
+![MLDash Dashboard All-Data Charts](/images/charts_global.jpg "MLDash Dashboard Interface - Filterless Charts")
 
 ##### Data visualization Charts (Charts That respond to Metrics Filtering):
-![MLDash Dashboard Filtered ](/images/charts_local.jpg "MLDash Dashboard Interface for Reinforcement Learning")
+![MLDash Dashboard Filtered ](/images/charts_local.jpg "MLDash Dashboard Interface - Filtered Charts")
+
+##### During Training, an animation of the learning model's efforts is displayed (Users can enable or disable this via a dashbord toggle interface element):
+![MLDash Dashboard Animation](/images/pygame.jpg "MLDash Dashboard Interface - Pygame Animation")
 
 #####   In the category of algorithms and data structures, I overhauled the reinforcement learning algorithm's core method of learning from its own experiences. The MLDash artifact does not perform random sampling of its experiences to learn, but instead performs prioritized sampling which identifies experiences that did not conform to the model's predictions, and emphasizes these experiences, to form a better predictive model (another effect of this implementation was a significant reduction in the amount of memory needed to solve the reinforcement learning problem, reducing the required amount of combined physical RAM and virtual memory from 80-100GB to 16-32GB, a 2.5 to 6.25 reduction factor). Additional improvements in memory efficiency were gained through the use of an alternative neural network optimizer. While the RMSprop optimizer is slightly less accurate than the Adam optimizer, it only uses about a third of the memory due to different methods of computing moving averages (The slight loss in accuracy was more than compensated for by the upgraded sampling method, and limiting memory consumption is of paramount importance if the program is to be useful for the target audience, who may not have extraordinary computer hardware at their disposal). The code for the PrioritizedBuffer class can be seen here:
 
