@@ -336,13 +336,13 @@ class Security(object):
 
 ##### During training, hyperparameter values and performance metrics are written to the metrics.csv file. The metrics collection and summary collection are contained in the MongoDB TRAIN database. When the model successfully balances the pole (for a minimum average duration) the metrics.csv file that contains training data is read into a Python dictionary and written to the TRAIN/metrics database collection. Once the database has been populated with training data, users can view this data using the dashboard. The dashboard allows the data to be viewed in the form of an interactive data table and dynamic data visualizations. Users have the ability to filter data to examine summary data and individual training sessions, and the accompanying charts change along with the data table.
 
-##### Additional functions were added to the crud.py, score_logger.py to facilitate local storage of learning model training data, and the ability to write this data to a database. The Dashboard.ipynb file was upgraded to provide a relevant and task-specific interface with enhanced interactivity, dataframe filtering, data session indexing, and data visualization capabilities.
+##### Additional functions were added to the crud.py, score_logger.py to facilitate local storage of learning model training data, and the ability to write this data to a persistent database. The Dashboard.ipynb file was upgraded to provide a relevant and task-specific interface with enhanced interactivity, dataframe filtering, data session indexing, and data visualization capabilities.
 
 ##### The learning algorithm itself enjoyed a significant upgrade that improved its ability to learn from its experiences. During experience replay (code found in dqn_solver.py) the batch sampling method was upgraded from using a random sampling procedure to using a prioritized sampling mehtod (code found in the prioritized_buffer.py file), resulting in a more effective implementation of the learning algorithm and contributing to a significant reduction in total memory use. 
 
 ##### A custom Security class implements credential security before the credentials are passed in the database connection string, which is then secured with SCRAM-SHA-256.
 
-##### Interface elements such as GPU indicator, latest session indicator, wipe database button, and animation toggle were added to enhance user experience
+##### Interface elements such as GPU indicator, latest session indicator, wipe database button, and animation toggle were added to enhance user experience.
 
 
 ### Narratives
