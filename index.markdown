@@ -312,9 +312,9 @@ class Security(object):
 	
 #####   While I have worked on many coding projects throughout my academic career, I found the MLDash project to be particularly rewarding. The Pythonic combination of artificial intelligence, database manipulation, data visualization, software engineering, and secure coding was one that will help me to prepare for even more challenging projects in my chosen career as a machine learning engineer. My skills in planning, research, communication, and time management also contributed to the overall success of my code enhancement plan for the Computer Science Capstone. As I continue to develop my skills in computer science, I will use what I have learned to make significant contributions to the teams and organizations I work with, and I look forward to what the future will bring.
 
-### Artifacts (The Dashboard and Cartpole artifacts are combined into the basis of the MLDash artifact during Enhancement 1)
+### Artifacts 
 
-#### The lumutek.github.io repository contains 5 snapshots of the MLDash application that span the development process (documentation added throughout development). Here are links to all of the code:
+#### The lumutek.github.io repository contains 5 snapshots of the MLDash application that span the development process (documentation added throughout development). The Dashboard and Cartpole artifacts are combined into the basis of the MLDash artifact during Enhancement 1. Here are links to all of the code:
 
 * ##### [Origin][ml-origin] - The Cartpole program and the Dashboard program, before any integration or upgrades
 
