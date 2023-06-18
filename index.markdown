@@ -246,7 +246,7 @@ class MLMongo(object):
             exit()
 ```
 
-#####   In the category of security, the database authentication string was upgraded to require the use of the SCRAM-SHA-256 authentication mechanism, and the code was modified so that the authentication credentials used in the connection string were note storered in the code itself. The interface was modified to prompt users for a valid username and password, which are specified by a MongoDB admin user; the main content of the program is not displayed until a user successfully authenticates. A security class was created, the instances of which utilized a cryptographically secure single-use byte sequence, derived from the secrets library. The secure byte-sequence is truncated to the length of both the username and password input byte-translations, and the credentials are XORed against the relevant variable length sequence, then converted to hexidecimal. The encoded credentials and security object are then used to create a CRUD-capable MongoDB agent object, which decodes the credentials and inserts them into the database connection string. The code then attempts to ping the database server, only giving access to the dashboard content when the ping operation is successful. The Security class is shown in full detail here:
+#####   In the category of security, the database authentication string was upgraded to require the use of the SCRAM-SHA-256 authentication mechanism, and the code was modified so that the authentication credentials used in the connection string were note storered in the code itself. The interface was modified to prompt users for a valid username and password, which are specified by a MongoDB admin user; the main content of the program is not displayed until a user successfully authenticates. A security class was created, the instances of which utilized a cryptographically secure single-use byte sequence, derived from the secrets library. The secure byte-sequence is truncated to the length of both the username and password input byte-translations, and the credentials are XORed against the relevant variable length sequence, then converted to hexidecimal. The encoded credentials and security object are then used to create a CRUD-capable MongoDB agent object, which decodes the credentials and inserts them into the database connection string. The code then attempts to ping the database server, only giving access to the dashboard content when the ping operation is successful. Exception handling was used throughout the code, where needed, and Python-specific methods were used when opening files that ensure they are closed automatically. The Security class is shown in full detail here:
 
 ```python 
 import secrets
@@ -309,7 +309,7 @@ class Security(object):
 	
 #####   While I have worked on many coding projects throughout my academic career, I found the MLDash project to be particularly rewarding. The Pythonic combination of artificial intelligence, database manipulation, data visualization, software engineering, and secure coding was one that will help me to prepare for even more challenging projects in my chosen career as a machine learning engineer. My skills in planning, research, communication, and time management also contributed to the overall success of my plan for the Computer Science Capstone. As I continue to develop my skills in computer science, I will use what I have learned to make significant contributions to the teams and organizations I work with, and I look forward to what the future will bring.
 
-### Artifacts (The Dashboard and Cartpole artifacts are combined in the MLDash artifact in Enhancement 1)
+### Artifacts (The Dashboard and Cartpole artifacts are combined into the basis of the MLDash artifact during Enhancement 1)
 
 #### The CS_499 Github repository contains 5 snapshots of the MLDash application that span the development process (documentation added throughout development). Here are links to all of the code:
 
@@ -332,11 +332,13 @@ class Security(object):
 
 ##### During training, hyperparameter values and performance metrics are written to the metrics.csv file. The metrics collection and summary collection are contained in the MongoDB TRAIN database. When the model successfully balances the pole (for a minimum average duration) the metrics.csv file that contains training data is read into a Python dictionary and written to the TRAIN/metrics database collection. Once the database has been populated with training data, users can view this data using the dashboard. The dashboard allows the data to be viewed in the form of an interactive data table and dynamic data visualizations. Users have the ability to filter data to examine summary data and individual training sessions, and the accompanying charts change along with the data table.
 
-##### This project was created by integrating a simpler dashboard program and a basic cartpole learning model implementation. Various upgrades were made, along the way, in areas related to software engineering, algorithms and data structures, and databases:
-
 ##### Additional functions were added to the crud.py, score_logger.py to facilitate local storage of learning model training data, and the ability to write this data to a database. The Dashboard.ipynb file was upgraded to provide a relevant and task-specific interface with enhanced interactivity, dataframe filtering, data session indexing, and data visualization capabilities.
 
-##### The learning algorithm itself enjoyed a significant upgrade that improved its ability to learn from its experiences. During experience replay (code found in dqn_solver.py) the batch sampling method was upgraded from using a random sampling procedure to use prioritized sampling (code found in the prioritized_buffer.py file), resulting in a more effective implementation of the learning algorithm and contributing to significant reduction in total memory use. 
+##### The learning algorithm itself enjoyed a significant upgrade that improved its ability to learn from its experiences. During experience replay (code found in dqn_solver.py) the batch sampling method was upgraded from using a random sampling procedure to using a prioritized sampling mehtod (code found in the prioritized_buffer.py file), resulting in a more effective implementation of the learning algorithm and contributing to a significant reduction in total memory use. 
+
+##### A custom Security class implements credential security before the credentials are passed in the database connection string, which is then secured with SCRAM-SHA-256.
+
+##### Interface elements such as GPU indicator, latest session indicator, wipe database button, and animation toggle 
 
 ##### The initial code review (informal) can be viewed here or on [YouTube][code-review].
 {% include youtubePlayer.html id=page.youtubeId %}
