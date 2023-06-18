@@ -14,9 +14,10 @@ youtubeId: fjA3YFZK3E8
 ### Overview:
 ##### MLDash is a Jupyter Dash application that runs a reinforcement learning algorithm and writes training data to a MongoDB database, which it then converts into interactive data visualizations. An Anaconda environment was created to run the app, which connects to a MongoDB server. 
 
-##### Project files:
+#### Project files:
+##### Links to the code at various stages of development can be found below, under the **Artifacts** Section
 ![Program Files](/images/files.jpg "File Names for the Finished MLDash Artifact")
-###### (Note: The aidb.csv file is not a required part of the code, but holds sample data that can be uploaded to MongoDB to allow potential users to examine the program's functionalty without having to commit to training sessions that could each take hours. The summary.csv file is not read by the program, but stores a single record in the summary collection that describes an overview of the performance for each successful session.)
+###### (*Note: The aidb.csv file is not a required part of the code, but holds sample data that can be uploaded to MongoDB to allow potential users to examine the program's functionalty without having to commit to training sessions that could each take hours. The summary.csv file is not read by the program, but stores a single record in the summary collection that describes an overview of the performance for each successful session.*)
 
 ##### The initial code review (informal) can be viewed here or on [YouTube][code-review].
 {% include youtubePlayer.html id=page.youtubeId %}
