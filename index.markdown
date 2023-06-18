@@ -329,10 +329,14 @@ class Security(object):
 
 
 ### Highlights
-##### The MLDash program is centered around the Dashboard.ipynb file. This file creates an instance of the MLMongo class (defined in crud.py) to initiate a connection to a local MongoDB service. It also creates an instance of the Cartpole class, which makes use of several other classes: 
-* ###### DQNsolver (for the learning model setup, and learning procedures) 
-* ###### PrioritizedBuffer (an upgraded sampling procedure that makes experience replay a non-arbitrary process)
-* ###### ScoreLogger (to record hyperparameters and performance metrics)
+#### The MLDash program is centered around the Dashboard.ipynb file. This file creates instance of the following classes:
+* ##### MLMongo (defined in crud.py, to initiate a connection to a local MongoDB service) 
+* ##### Security (to facilitate secure access control) 
+* ##### Cartpole (To perform reinforcement learning) 
+#### The the Cartpole object then creates instances of the following classes:
+* ##### DQNsolver (for the learning model setup, and learning procedures) 
+* ##### PrioritizedBuffer (an upgraded sampling procedure that makes experience replay a non-arbitrary process)
+* ##### ScoreLogger (to record hyperparameters and performance metrics)
 
 ##### During training, hyperparameter values and performance metrics are written to the metrics.csv file. The metrics collection and summary collection are contained in the MongoDB TRAIN database. When the model successfully balances the pole (for a minimum average duration) the metrics.csv file that contains training data is read into a Python dictionary and written to the TRAIN/metrics database collection. Once the database has been populated with training data, users can view this data using the dashboard. The dashboard allows the data to be viewed in the form of an interactive data table and dynamic data visualizations. Users have the ability to filter data to examine summary data and individual training sessions, and the accompanying charts change along with the data table.
 
