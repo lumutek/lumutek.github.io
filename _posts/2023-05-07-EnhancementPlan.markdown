@@ -2,7 +2,7 @@
 layout: post
 title:  "Enhancement Plan"
 title:  "SNHU Computer Science Capstone"
-date:   2023-06-10 05:00:00 -0700
+date:   2023-05-07 12:52:00 -0700
 categories: capstone narratives
 ---
 ##### I plan to integrate and enhance the functionality of two artifacts to showcase my software engineering skills. The selected artifacts were completed during CS-340 (a standalone dashboard application with a MongoDB backend) and CS-370 (a program that uses a deep Q reinforcement learning algorithm to solve the cartpole problem). This project will demonstrate skills gained throughout my Computer Science degree studies, including those related to Software Design and Engineering, Algorithms and Data Structures, and Databases. At least two of the following enhancement categories apply to each of the artifacts used:

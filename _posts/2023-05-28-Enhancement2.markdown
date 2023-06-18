@@ -2,7 +2,7 @@
 layout: post
 title:  "Enhancement #2 Narrative"
 title:  "Algorithms and Data Structures"
-date:   2023-06-13 05:00:00 -0700
+date:   2023-05-28 05:00:00 -0700
 categories: capstone narratives
 ---
 ##### The most significant component illustrating my algorithms and data structures abilities is the overhaul of experience_replay() function, which was upgraded from taking random samples to taking samples that are prioritized based on their probabilistic value to the learning algorithm. Additionally, various measures were taken to ensure that memory consumption was controlled, including the addition code that constrains the algorithm to prevent the completion of poorly performing models and disruption of models that perform so well that they constitute pseudo-infinite loops. The resulting improvements in performance and memory consumption and helped to satisfy software requirements to such a degree that I was also able to implement the RMSprop optimizer instead of the Adam optimizer (this further reduces memory consumption at the cost of accuracy). 

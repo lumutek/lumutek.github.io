@@ -2,7 +2,7 @@
 layout: post
 title:  "Additional Enhancements"
 title:  "MLDash"
-date:   2023-06-15 05:00:00 -0700
+date:   2023-06-11 05:00:00 -0700
 categories: capstone narratives
 ---
 ##### Since the last update for the MLDash artifact, upgrades have been made to improve security. A security class was created in the security.py file, with member functions capable of encoding and decoding the arguments used to initialize a security object. The original code stored the MongoDB username and password by assigning cleartext string constants to variables, which were then used to create a MongoDB CRUD (create, read, update, delete) capable object that connected to the database using fixed credentials. This meant that database setup (using Mongo Shell) required the creation of an authorized user that was limited to a single possible username and password. Now, there is no need to expose the credentials in the source code, and database setup can use any username and password combination. 
