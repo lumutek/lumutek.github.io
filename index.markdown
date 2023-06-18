@@ -23,7 +23,66 @@ youtubeId: fjA3YFZK3E8
 
 #####   In the category of algorithms and data structures, I overhauled the reinforcement learning algorithm's core method of learning from its own experiences. The MLDash artifact does not perform random sampling of its experiences to learn, but instead performs prioritized sampling which identifies experiences that did not conform to the model's predictions, and emphasizes these experiences, to form a better predictive model (another effect of this implementation was a significant reduction in the amount of memory needed to solve the reinforcement learning problem, reducing the required amount of combined physical RAM and virtual memory from 80-100GB to 16-32GB, a 2.5 to 6.25 reduction factor). Additional improvements in memory efficiency were gained through the use of an alternative neural network optimizer. While the RMSprop optimizer is slightly less accurate than the Adam optimizer, it only uses about a third of the memory due to different methods of computing moving averages (The slight loss in accuracy was more than compensated for by the upgraded sampling method, and limiting memory consumption is of paramount importance if the program is to be useful for the target audience, who may not have extraordinary computer hardware at their disposal). In the category of databases, the CRUD database functionality (create, read, update, and delete) was upgraded to include write capabilities. During reinforcement learning, hyperparameters and performance metrics are written to a CSV file; if the model is successful, the CSV file is read into a Python dictionary (equivalent to a C++ hash table) and written to the MongoDB database. Data written to the database appears in the interface as an interactive data table and interactive charts, allowing users to make observations about the relative performance of different model instances, as well as the performance of individual instances, as well. 
 
-#####   In the category of security, the database authentication string was upgraded to require the use of the SCRAM-SHA-256 authentication mechanism, and the code was modified so that the authentication credentials used in the connection string were note storered in the code itself. The interface was modified to prompt users for a valid username and password, which are specified by a MongoDB admin user; the main content of the program is not displayed until a user successfully authenticates. A security class was created, the instances of which utilized a cryptographically secure single-use byte sequence, derived from the secrets library. The secure byte-sequence is truncated to the length of both the username and password input byte-translations, and the credentials are XORed against the relevant variable length sequence, then converted to hexidecimal. The encoded credentials and security object are then used to create a CRUD-capable MongoDB agent object, which decodes the credentials and inserts them into the database connection string. The code then attempts to ping the database server, only giving access to the dashboard content when the ping operation is successful. 
+#####   In the category of security, the database authentication string was upgraded to require the use of the SCRAM-SHA-256 authentication mechanism, and the code was modified so that the authentication credentials used in the connection string were note storered in the code itself. The interface was modified to prompt users for a valid username and password, which are specified by a MongoDB admin user; the main content of the program is not displayed until a user successfully authenticates. A security class was created, the instances of which utilized a cryptographically secure single-use byte sequence, derived from the secrets library. The secure byte-sequence is truncated to the length of both the username and password input byte-translations, and the credentials are XORed against the relevant variable length sequence, then converted to hexidecimal. The encoded credentials and security object are then used to create a CRUD-capable MongoDB agent object, which decodes the credentials and inserts them into the database connection string. The code then attempts to ping the database server, only giving access to the dashboard content when the ping operation is successful. The Security class is shown in full detail here:
+
+``` 
+import secrets
+
+class Security(object):
+    def __init__(self):
+        #generate random xor key
+        #Using 32 bytes or more ensures that the number generated is cryptographically secure
+        self.binary_key = secrets.token_bytes(32)
+    
+    
+    def xor_encode(self, username, password):
+        if username is not None:
+            if password is not None:
+                # Convert username and password to byte strings
+                username_bytes = bytes(username, 'utf-8')
+                password_bytes = bytes(password, 'utf-8')
+
+                # Get length of username and password
+                u_length = len(username_bytes)
+                p_length = len(password_bytes)
+
+                # Perform XOR operation on corresponding bytes
+                u_binary_key = self.binary_key[:u_length]
+                p_binary_key = self.binary_key[:p_length]
+                u_encode_bytes = bytes([a^b for a, b in zip(username_bytes, u_binary_key)])
+                p_encode_bytes = bytes([a^b for a, b in zip(password_bytes, p_binary_key)])
+
+                # Convert output to hexadecimal string
+                u_encode_hex = u_encode_bytes.hex()
+                p_encode_hex = p_encode_bytes.hex()
+            else:
+                return (f'The username was empty')
+        else:
+            return (f'The username was empty')
+        
+        return u_encode_hex, p_encode_hex
+    
+
+    def xor_decode(self, username_hex, password_hex):
+        # Convert hexadecimal string to byte string
+        user_bytes = bytes.fromhex(username_hex)
+        pass_bytes = bytes.fromhex(password_hex)
+        
+        # Get length of username and password
+        u_length = len(user_bytes)
+        p_length = len(pass_bytes)
+        
+        u_binary_key = self.binary_key[:u_length]
+        p_binary_key = self.binary_key[:p_length]
+        u_decode_bytes = bytes([a^b for a, b in zip(user_bytes, u_binary_key)])
+        p_decode_bytes = bytes([a^b for a, b in zip(pass_bytes, p_binary_key)])
+
+        # Convert output to original string
+        u_decode_string = u_decode_bytes.decode('utf-8')
+        p_decode_string = p_decode_bytes.decode('utf-8')
+
+        return u_decode_string, p_decode_string 
+```
 	
 #####   While I have worked on many coding projects throughout my academic career, I found the MLDash project to be particularly rewarding. The Pythonic combination of artificial intelligence, database manipulation, data visualization, software engineering, and secure coding was one that will help me to prepare for even more challenging projects in my chosen career as a machine learning engineer. My skills in planning, research, communication, and time management also contributed to the overall success of my plan for the Computer Science Capstone. As I continue to develop my skills in computer science, I will use what I have learned to make significant contributions to the teams and organizations I work with, and I look forward to what the future will bring.
 

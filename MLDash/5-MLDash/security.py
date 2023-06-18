@@ -1,19 +1,12 @@
 import hashlib
 import secrets
-import random
 
 class Security(object):
     def __init__(self):
         #generate random xor key
-        #self.random_key = random.randint(0, (1 << 20) - 1)
-        self.binary_key = secrets.token_bytes(20)
-        # Convert the integer to a binary string with 20 digits
-        #self.binary_key = int(bin(self.random_key)[2:].zfill(20), 2).to_bytes(80, "big")
-        
-    def hash_password(self, password):
-        # Hash the password using sha-256
-        self.password_hash = hashlib.sha256(password.encode('utf-8')).hexdigest()
-        return self.password_hash
+        #Using 32 bytes or more ensures that the number generated is cryptographically secure
+        self.binary_key = secrets.token_bytes(32)
+    
     
     def xor_encode(self, username, password):
         if username is not None:
@@ -41,7 +34,6 @@ class Security(object):
             return (f'The username was empty')
         
         return u_encode_hex, p_encode_hex
-    
     
 
     def xor_decode(self, username_hex, password_hex):
