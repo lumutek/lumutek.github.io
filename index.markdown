@@ -18,6 +18,9 @@ youtubeId: fjA3YFZK3E8
 ![Program Files](/images/files.jpg "File Names for the Finished MLDash Artifact")
 ###### (Note: The aidb.csv file is not a required part of the code, but holds sample data that can be uploaded to MongoDB to allow potential users to examine the programs functionalty without having to commit to training sessions that could each take hours. The summary.csv file is not read by the program, but stores a single record in the summary collection that describes an overview of the performance for each successful session.)
 
+##### The initial code review (informal) can be viewed here or on [YouTube][code-review].
+{% include youtubePlayer.html id=page.youtubeId %}
+
 ### Professional Self-Assessment
 #####   The CS-499 Computer Science capstone was a challenging, but rewarding, exercise of the skills I have developed throughout the pursuit of my BS in Computer Science. I chose to integrate two code artifacts and repurpose their functionality to showcase particular skills that will my serve me in my future career as a software engineer, machine learning engineer, or data scientist. Additionally, the chosen artifacts represent work done in software design and engineering, algorithms and data structures, and databases, which represent in-demand computer science skills. Enhancements to the artifacts were made according to a well-considered plan, and instructor feedback was continuously integrated along the way, resulting in a single artifact with functionality that is greater than the sum of its parts. These efforts gave rise to the MLDash application.
 
@@ -338,10 +341,7 @@ class Security(object):
 
 ##### A custom Security class implements credential security before the credentials are passed in the database connection string, which is then secured with SCRAM-SHA-256.
 
-##### Interface elements such as GPU indicator, latest session indicator, wipe database button, and animation toggle 
-
-##### The initial code review (informal) can be viewed here or on [YouTube][code-review].
-{% include youtubePlayer.html id=page.youtubeId %}
+##### Interface elements such as GPU indicator, latest session indicator, wipe database button, and animation toggle were added to enhance user experience
 
 
 ### Narratives
