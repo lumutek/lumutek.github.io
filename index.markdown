@@ -38,7 +38,7 @@ youtubeId: fjA3YFZK3E8
 ##### Data Visualization Charts (Session Comparison, No Filtering):
 ![MLDash Dashboard All-Data Charts](/images/charts_global.jpg "MLDash Dashboard Interface - Filterless Charts")
 
-##### Data visualization Charts (Charts That respond to Metrics Filtering):
+##### Data visualization Charts (Charts That Respond to Metrics Filtering):
 ![MLDash Dashboard Filtered ](/images/charts_local.jpg "MLDash Dashboard Interface - Filtered Charts")
 
 ##### During Training, an animation of the learning model's efforts is displayed (Users can enable or disable this via a dashbord toggle interface element):
