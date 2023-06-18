@@ -333,8 +333,9 @@ class Security(object):
 * ##### MLMongo (defined in crud.py, to initiate a connection to a local MongoDB service) 
 * ##### Security (to facilitate secure access control) 
 * ##### Cartpole (To perform reinforcement learning) 
+
 #### The the Cartpole object then creates instances of the following classes:
-* ##### DQNsolver (for the learning model setup, and learning procedures) 
+* ##### DQNSolver (for the learning model setup, and learning procedures) 
 * ##### PrioritizedBuffer (an upgraded sampling procedure that makes experience replay a non-arbitrary process)
 * ##### ScoreLogger (to record hyperparameters and performance metrics)
 
