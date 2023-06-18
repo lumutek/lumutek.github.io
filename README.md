@@ -4,14 +4,14 @@ title: MLDash Requirements
 permalink: /readme/
 ---
 
-## Created by Lukas Mueller
+# Created by Lukas Mueller
 
-### SNHU, CS-499 Computer Science Capstone 
+## SNHU, CS-499 Computer Science Capstone 
 
-### Machine Learning Dashboard using OpenAI Gym, Tensorflow, MongoDB, and JupyterDash. 
+## Machine Learning Dashboard using OpenAI Gym, Tensorflow, Keras, MongoDB, and JupyterDash. 
 
 
-#### Overviev: 
+### Overviev: 
 MLDash is currently a Jupyter Notebook application that reads to and writes from an MongoDB database. 
 An Anaconda environment was created to run the notebook in. The CS_499 repository contains 5 snapshots of the MLDash
 application that span the development process(documentation added throughout development):
@@ -28,7 +28,7 @@ application that span the development process(documentation added throughout dev
 
 
 
-#### System requirements:
+### System requirements:
 
 16 GB of physical RAM, assuming that normal system function takes around 4GB or less
 Some virtual memory (Set to 8 GB, just in case)
@@ -36,7 +36,7 @@ CPU with speed of at least 1Ghz
 (There are no GPU requirements for this version, but CUDA enabled cores should be used automatcally if present on the host system)
 
 
-#### Current Anaconda environment specifications:
+### Current Anaconda environment specifications:
 
 * Python 3.7.16 (will upgrade if possible)
 * gym=0.25.2
@@ -66,7 +66,7 @@ py -m pip install --upgrade pip
 pip install gym=0.25.2 tensorflow==2.11.0 numpy==1.21.6 pandas==1.3.5 matplotlib==3.5.3 pygame==2.4.0 pyglet==2.0.7 jupyter-dash==0.4.2 dash==2.10.0 pymongo==4.3.3 dash_leaflet==0.1.23 notebook==6.5.2 ipykernal=6.16.2, statsmodels, dash-bootstrap-components
 
 
-#### Install MongoDB as a local server instance. 
+### Install MongoDB as a local server instance. 
 
 Install either MongoDB Compass (GUI) or the Mongo Shell (CLI) (mongosh was used by the developer, on Windows 10)
 
@@ -120,7 +120,7 @@ Once this setup has been completed, the correct connection string is as follows
 mongodb://yourusername:yourpassword@localhost:27017/TRAIN?authMechanism=SCRAM-SHA-256
 
 
-# Jupyter Notebook Setup
+### Jupyter Notebook Setup
 
 In order to apply the environment in Jupyter Notebook, type in the following command:
 
