@@ -315,7 +315,7 @@ class Security(object):
 
 ### Artifacts 
 
-#### The lumutek.github.io repository contains 5 snapshots of the MLDash application that span the development process (documentation added throughout development). The Dashboard and Cartpole artifacts are combined into the basis of the MLDash artifact during Enhancement 1. Here are links to all of the code:
+#### The MLDash Github repository contains 5 snapshots of the MLDash application that span the development process (documentation added throughout development). The Dashboard and Cartpole artifacts are combined into the basis of the MLDash artifact during Enhancement 1. Here are links to all of the code:
 
 * ##### [Origin][ml-origin] - The Cartpole program and the Dashboard program, before any integration or upgrades
 
