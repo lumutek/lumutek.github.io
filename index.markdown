@@ -321,11 +321,11 @@ class Security(object):
 
 * ##### [Enhancement 1][ml-enhancea] - Software Design and Enginering (Requirements Analysis, Software Integration, Interface Design)
 
-* ##### [Enhancement 2][ml-enhanceb] - Algorithms and Data Structure (optimization of speed and memory consumption)
+* ##### [Enhancement 2][ml-enhanceb] - Algorithms and Data Structures (Optimization of speed and memory consumption)
 
 * ##### [Enhancement 3][ml-enhancec] - Databases (Expansion of database and data handling capabilities)
 
-* ##### [MLDash][ml-enhanced] - The most recent iteration of the final artifact, which includes security upgrades
+* ##### [MLDash][ml-enhanced] - The most recent iteration of the final artifact (Security upgrades, interface improvements, and final polishing)  
 
 
 ### Highlights
