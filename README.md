@@ -13,7 +13,7 @@ permalink: /readme/
 
 ### Overviev: 
 MLDash is currently a Jupyter Notebook application that reads to and writes from an MongoDB database. 
-An Anaconda environment was created to run the notebook in. The CS_499 repository contains 5 snapshots of the MLDash
+An Anaconda environment was created to run the notebook in. The MLDash repository contains 5 snapshots of the MLDash
 application that span the development process(documentation added throughout development):
 
 1. Origin (The Catpole program and the Dashboard program, before any integration or upgrades)
@@ -31,9 +31,9 @@ application that span the development process(documentation added throughout dev
 ### System requirements:
 
 16 GB of physical RAM, assuming that normal system function takes around 4GB or less
-Some virtual memory (Set to 8 GB, just in case)
+Some virtual memory (Set to at 16 GB, just in case)
 CPU with speed of at least 1Ghz 
-(There are no GPU requirements for this version, but CUDA enabled cores should be used automatcally if present on the host system)
+(There are no GPU requirements for this version, but CUDA enabled GPU cores will be automatically detected and used if present on the host system)
 
 
 ### Current Anaconda environment specifications:
@@ -55,7 +55,7 @@ CPU with speed of at least 1Ghz
 * statsmodels
 * dash-bootstrap-components
 
-The Anaconda environment can be created by entering the following commands:
+##### The Anaconda environment can be created by entering the following commands:
 
 conda create --name MLDash python=3.7.16
 
