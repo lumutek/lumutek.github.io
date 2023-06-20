@@ -75,7 +75,9 @@ post-mongosh installation setup:
 In the terminal, type the following commands:
 (this allows you to set up the necessary databases, users, roles, and security mechnisms)
 * mongosh
+
 * show dbs
+
 * use admin
 
 * db.createUser({
@@ -95,7 +97,9 @@ In the terminal, type the following commands:
 )
 
 * use TRAIN
+
 * db.createCollection("metrics")
+
 * db.createCollection("summary")
 
 * db.runCommand({ 
