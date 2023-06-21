@@ -11,7 +11,7 @@ permalink: /readme/
 ## Machine Learning Dashboard using OpenAI Gym, Tensorflow, Keras, MongoDB, and JupyterDash. 
 
 
-### Overviev: 
+### Overview: 
 MLDash is currently a Jupyter Notebook application that reads to and writes from an MongoDB database. 
 An Anaconda environment was created to run the notebook in. The MLDash repository contains 5 snapshots of the MLDash
 application that span the development process(documentation added throughout development):
