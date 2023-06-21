@@ -317,27 +317,27 @@ class Security(object):
 
 #### The MLDash Github repository contains 5 snapshots of the MLDash application that span the development process (documentation added throughout development). The Dashboard and Cartpole artifacts are combined into the basis of the MLDash artifact during Enhancement 1. Here are links to all of the code:
 
-* ##### [Origin][ml-origin] - The Cartpole program and the Dashboard program, before any integration or upgrades
+##### [Origin][ml-origin] - The Cartpole program and the Dashboard program, before any integration or upgrades
 
-* ##### [Enhancement 1][ml-enhancea] - Software Design and Enginering (Requirements Analysis, Software Integration, Interface Design)
+##### [Enhancement 1][ml-enhancea] - Software Design and Enginering (Requirements Analysis, Software Integration, Interface Design)
 
-* ##### [Enhancement 2][ml-enhanceb] - Algorithms and Data Structures (Optimization of speed and memory consumption)
+##### [Enhancement 2][ml-enhanceb] - Algorithms and Data Structures (Optimization of speed and memory consumption)
 
-* ##### [Enhancement 3][ml-enhancec] - Databases (Expansion of database and data handling capabilities)
+##### [Enhancement 3][ml-enhancec] - Databases (Expansion of database and data handling capabilities)
 
-* ##### [MLDash][ml-enhanced] - The most recent iteration of the final artifact (Security upgrades, interface improvements, and final polishing)  
+##### [MLDash][ml-enhanced] - The most recent iteration of the final artifact (Security upgrades, interface improvements, and final polishing)  
 
 
 ### Highlights
 #### The MLDash program is centered around the Dashboard.ipynb file. This file creates instance of the following classes:
-* ##### MLMongo (defined in crud.py, to initiate a connection to a local MongoDB service) 
-* ##### Security (to facilitate secure access control) 
-* ##### Cartpole (To initiate the reinforcement learning algorithm) 
+##### MLMongo (defined in crud.py, to initiate a connection to a local MongoDB service) 
+##### Security (to facilitate secure access control) 
+##### Cartpole (To initiate the reinforcement learning algorithm) 
 
 #### The the Cartpole object then creates instances of the following classes:
-* ##### DQNSolver (for the learning model setup, and learning procedures) 
-* ##### PrioritizedBuffer (an upgraded sampling procedure that makes experience replay a non-arbitrary process)
-* ##### ScoreLogger (to record hyperparameters and performance metrics)
+##### DQNSolver (for the learning model setup, and learning procedures) 
+##### PrioritizedBuffer (an upgraded sampling procedure that makes experience replay a non-arbitrary process)
+##### ScoreLogger (to record hyperparameters and performance metrics)
 
 ##### During training, hyperparameter values and performance metrics are written to the metrics.csv file. The metrics collection and summary collection are contained in the MongoDB TRAIN database. When the model successfully balances the pole (for a minimum average duration) the metrics.csv file that contains training data is read into a Python dictionary and written to the TRAIN/metrics database collection. Once the database has been populated with training data, users can view this data using the dashboard. The dashboard allows the data to be viewed in the form of an interactive data table and dynamic data visualizations. Users have the ability to filter data to examine summary data and individual training sessions, and the accompanying charts change along with the data table.
 
