@@ -1,7 +1,7 @@
 ---
-layout: home
-title: Portfolio
-permalink: /portfolio/
+layout: page
+title: MLDash
+permalink: /MLDash/
 background: '/images/bd_vis.jpg'
 youtubeId: fjA3YFZK3E8
 ---
