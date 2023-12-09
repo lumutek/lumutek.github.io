@@ -16,15 +16,21 @@ permalink: /about/
 
 
 #### Here is a glimpse of just some of my skills and accomplishments:
-![](/images/GADA.jpeg "")
-![](/images/ec.jpeg "")
-![](/images/NCL_spring.jpeg "")
-![](/images/NCL_fall.jpeg "")
-![](/images/A_plus.jpeg "")
-![](/images/Net_plus.jpeg "")
-![](/images/Sec_plus.jpeg "")
-![](/images/CIOS.jpeg "")
-![](/images/CSIS.jpeg "")
+#### Data Science
+![Google](/images/GADA.jpeg "Google Advanced Data Analytics Professional")
+
+#### Information Security
+![EC-Council](/images/ec.jpeg "EC-Council Cybersecurity Mentor")
+![NCL](/images/NCL_spring.jpeg "National Cyber League, Top Player (Spring 2023")
+![NCL](/images/NCL_fall.jpeg "National Cyber League, Top Player (Fall 2023")
+![Sec+](/images/Sec_plus.jpeg "CompTIA Security+")
+![](/images/CSIS.jpeg "CompTIA Secure Infrastructure Specialist")
+
+#### Other noteworthy IT
+![A+](/images/A_plus.jpeg "CompTIA A+")
+![Net+](/images/Net_plus.jpeg "CompTIA Network+")
+![](/images/CIOS.jpeg "CompTIA IT Operations Specialist")
+
 
 You can find the source code for [Jekyll][jekyll-organization] at GitHub
 
