@@ -11,4 +11,6 @@ background: '/images/bd_vis.jpg'
 ### Data Science Dashboard with sklearn, multiple linear/logistic regression, ensemble learning, data cleaning, and data visualization.
 
 ### Overview:
-####No better time than now
+Having recently completed the Google Advanced Data Analytics Professional track, I thought it would be a great idea to continue cultivating my new data science skills.
+Like the MLDash project, this project uses previous work as a starting point, and iterative development will take place as a series of enhancements. The state of the code 
+before and after each enhancement is provided to illustrate code evolution. A chronological update summaries can be easily viewed in the narratives section.
