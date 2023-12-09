@@ -18,3 +18,9 @@ before and after each enhancement is provided to illustrate code evolution. A ch
 #### Initial Commit
 You can view the code for the initial commit at [1-Origin]. This code will be referred to as "Origin"
 [1-Origin][https://github.com/lumutek/lumutek.github.io/tree/main/DataFlow/1-Origin]
+
+![Description of Variables](gada_variables)
+![Heatmap](gada_heatmap.jpg)
+![Correlation Matrix](gada_corr_matrix.jpg)
+![Confusion Matrix](gada_conf_matrix.jpg)
+![Feature Importance](gada_feat_imp.jpg)
