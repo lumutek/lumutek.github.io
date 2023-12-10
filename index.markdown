@@ -1,7 +1,7 @@
 ---
 layout: home
 title: MLDash
-permalink: /MLDash/
+permalink: /index/
 background: '/images/bd_vis.jpg'
 youtubeId: fjA3YFZK3E8
 ---
