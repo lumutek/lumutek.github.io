@@ -74,4 +74,4 @@ xgb_cv
 ### Narratives
 ##### --> You can also jump to the [Narratives][blog-posts] on the Blog page, where I take you on a journey through project relevant software development and enhancement processes.
 
-[blog-posts]: https://lumutek.github.io/capstone/narratives/2023/09/12/Origin.html
+[blog-posts]: https://lumutek.github.io/capstone/narratives/2023/12/09/Origin.html
