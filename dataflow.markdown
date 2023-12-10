@@ -16,14 +16,13 @@ Like the MLDash project, this project uses previous work as a starting point, an
 before and after each enhancement is provided to illustrate code evolution. A chronological update summaries can be easily viewed in the narratives section.
 
 #### Initial Commit
-You can view the code for the initial commit at [Origin].
-[Origin][1-origin]
+You can view the code for the initial commit at [Origin][1-origin].
 
-![Description of Variables](gada_variables "Description of Variables")
-![Heatmap](gada_heatmap.jpg "Heatmap of Correlations between variables")
-![Correlation Matrix](gada_corr_matrix.jpg "Pearson Correlation Matrix")
-![Confusion Matrix](gada_conf_matrix.jpg "Confusion Matrix for prediction of employee leaving company")
-![Feature Importance](gada_feat_imp.jpg "Relative Feature Importance)
+![Description of Variables](/images/gada_variables "Description of Variables")
+![Heatmap](/images/gada_heatmap.jpg "Heatmap of Correlations between variables")
+![Correlation Matrix](/images/gada_corr_matrix.jpg "Pearson Correlation Matrix")
+![Confusion Matrix](/images/gada_conf_matrix.jpg "Confusion Matrix for prediction of employee leaving company")
+![Feature Importance](/images/gada_feat_imp.jpg "Relative Feature Importance)
 
 
 [1-origin]: https://github.com/lumutek/lumutek.github.io/tree/main/DataFlow/1-Origin
