@@ -36,7 +36,7 @@ columns = df1.columns.tolist()
 for column in columns:
     print(column)
 ```
-###### Column Names After One-Hot Encoding:
+##### Column Names After One-Hot Encoding:
 - satisfaction_level
 - last_evaluation
 - number_project
