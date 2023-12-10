@@ -3,7 +3,7 @@ layout: post
 title:  "DataFlow (Initial Commit)"
 title:  "Data Science and Analysis in Python"
 date:   2023-012-09 18:44:00 -0700
-categories: gada narratives
+categories: gada_narratives
 ---
 ### I am excited to announce a new addition to my portfolio site! DataFlow is here!
 
