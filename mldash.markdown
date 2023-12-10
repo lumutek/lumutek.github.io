@@ -5,9 +5,8 @@ permalink: /MLDash/
 background: '/images/bd_vis.jpg'
 youtubeId: fjA3YFZK3E8
 ---
-# Lukas Mueller
 
-## Project Name: MLDash
+# Project Name: MLDash
 
 ### Machine Learning Dashboard using OpenAI Gym, Tensorflow, Keras, MongoDB, and JupyterDash.
 
