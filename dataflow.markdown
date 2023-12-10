@@ -13,7 +13,7 @@ background: '/images/bd_vis.jpg'
 ### Overview:
 Having recently completed the Google Advanced Data Analytics Professional track, I thought it would be a great idea to continue cultivating my new data science skills.
 Like the MLDash project, this project uses previous work as a starting point, and iterative development will take place as a series of enhancements. The state of the code 
-before and after each enhancement is provided to illustrate code evolution. A chronological update summaries can be easily viewed in the narratives section.
+before and after each enhancement is provided to illustrate code evolution. A chronologically ordered update summaries can be easily viewed in the narratives section below.
 
 #### Initial Commit
 You can view the code for the initial commit at [Origin][1-origin].
