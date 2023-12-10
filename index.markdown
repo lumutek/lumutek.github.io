@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: home
 title: MLDash
 permalink: /MLDash/
 background: '/images/bd_vis.jpg'
