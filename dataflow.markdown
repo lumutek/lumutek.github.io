@@ -36,43 +36,26 @@ columns = df1.columns.tolist()
 for column in columns:
     print(column)
 ```
-satisfaction_level
-
-last_evaluation
-
-number_project
-
-average_monthly_hours
-
-tenure
-
-Work_accident
-
-left
-
-promotion_last_5years
-
-Department_RandD
-
-Department_accounting
-
-Department_hr
-
-Department_management
-
-Department_marketing
-
-Department_product_mng
-
-Department_sales
-
-Department_support
-
-Department_technical
-
-salary_low
-
-salary_medium
+###### Column Names After One-Hot Encoding:
+- satisfaction_level
+- last_evaluation
+- number_project
+- average_monthly_hours
+- tenure
+- Work_accident
+- left
+- promotion_last_5years
+- Department_RandD
+- Department_accounting
+- Department_hr
+- Department_management
+- Department_marketing
+- Department_product_mng
+- Department_sales
+- Department_support
+- Department_technical
+- salary_low
+- salary_medium
 
 ```python
 #Define the y (outcome) variable.
