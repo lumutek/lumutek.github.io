@@ -18,6 +18,7 @@ before and after each enhancement is provided to illustrate code evolution. A ch
 #### Initial Commit
 You can view the code for the initial commit at [Origin][1-origin].
 
+#### Data Visualizations Used
 ![Description of Variables](/images/gada_variables "Description of Variables")
 ![Heatmap](/images/gada_heatmap.jpg "Heatmap of Correlations between variables")
 ![Correlation Matrix](/images/gada_corr_matrix.jpg "Pearson Correlation Matrix")
