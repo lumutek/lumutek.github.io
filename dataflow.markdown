@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: home
 title: DataFlow
 permalink: /dataflow/
 background: '/images/bd_vis.jpg'
@@ -70,3 +70,8 @@ xgb_cv
 
 
 [1-origin]: https://github.com/lumutek/lumutek.github.io/tree/main/DataFlow/1-Origin
+
+
+### Narratives
+##### --> You can jump to the "Naratives" section of the home page, where I take you on a journey through the software development and enhancement process.
+[Initial Commit(Origin)]: https://lumutek.github.io/capstone/narratives/2023/09/12/2023-12-09-Origin.markdown
