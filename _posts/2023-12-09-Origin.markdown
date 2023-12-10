@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "DataFlow (Initial Commit)"
+title:  "Data Science and Analysis in Python"
+date:   2023-012-09 18:44:00 -0700
+categories: gada narratives
+---
 ### I am excited to announce a new addition to my portfolio site! DataFlow is here!
 
 ##### Inspired by what I learned in the Google Advanced Data Analytics Professional course sequence, I've decided its time to flex my mental muscles once again. The DataFlow project will build on work I have already completed, and will be iteratively enhanced until it is transformed into a "Data Science Swiss Army Knife", useful for a wide variety of applications. The most ideal outcome will be the creation of software that not only has the tools needed to deal with common data science tasks but also has the intelligence to analyze raw data, take the user's goals into account, and recommend which techniques should be employed. After a user makes their selections, DataFlow will automatically clean data, perform feature engineering, train models, fit models, and test model predictions. Finally, the user will be presented with a report that details findings, as well as an analysis that describes whether the model assumptions hold and what confidence conclusions can be drawn with.
