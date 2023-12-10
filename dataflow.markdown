@@ -73,5 +73,6 @@ xgb_cv
 
 
 ### Narratives
-##### --> You can jump to the "Naratives" section of the home page, where I take you on a journey through the software development and enhancement process.
-[Initial Commit(Origin)]: https://lumutek.github.io/capstone/narratives/2023/09/12/Origin.markdown
+##### --> You can also jump to the "Naratives][narratives] section of the home page, where I take you on a journey through the software development and enhancement process.
+
+[narratives]: https://lumutek.github.io/capstone/narratives/2023/09/12/Origin.markdown
