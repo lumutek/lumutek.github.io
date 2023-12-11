@@ -20,6 +20,8 @@ You can view the code for the initial commit at [Origin][1-origin].
 #### Purpose
 The original purpose of the base code is data analyis focused on building a XGBoost model (using decision trees as base learners) that predicts whether an employee will leave the company. Conducting EDA ("exploratory data analysis") revealed that the data had exceptionally high variance with a large proportion of the data falling outside of the IQR maxima and minima. After one-hot encoding categorical values and cleaning the dataset, it became clear that the initial approach to modeling the data should employ a model that is resistant to the effects of outliers and variance. Thus, an XGBoost model was used, with decision trees as base learners. The strategy was to use such a model to provide a good measure of feature importance for successfully predicting an employee leaving the company (a binary classifier problem). Feature importance is then used to select a reduced set of features for use in a multiple logistic regression model.
 
+##### Description of Variables
+![Description of Variables](/images/gada_variables.jpg "Description of Variables")
 
 #### Key Code Samples
 ```python
@@ -92,8 +94,6 @@ xgb_cv = xgb_cv.fit(X_train, y_train)
 xgb_cv
 ```
 #### Data Visualizations Used
-##### Description of Variables
-![Description of Variables](/images/gada_variables.jpg "Description of Variables")
 ##### Heatmap of Correlations Between Variables
 The heatmap shows pairwise correlations between model features, including the target variable "left"  
 ![Heatmap](/images/gada_heatmap.jpg "Heatmap of Correlations Between Variables")
